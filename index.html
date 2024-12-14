@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="bg-inkwell text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-inkwell">
+            <div class="collapse container">
+                <a class="navbar-brand" href="/"><img src="logo.png" alt="Book Haven" height="40"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">Book News</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <section class="hero text-center">
+            <h1 class="display-3">Welcome to Book Haven</h1>
+            <p class="lead">Your destination for literary exploration and knowledge.</p>
+            <a href="gallery.html" class="btn btn-secondary btn-lg">Browse Our Collection</a>
+        </section>
+
+        <section class="mt-4">
+            <h2 class="text-center">Recent releases</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="imgs/Client3_Book1.png" class="card-img-top" alt="Brie Mine 4Ever">
+                        <div class="card-body">
+                            <h5 class="card-title">Brie Mine 4Ever</h5>
+                            <p class="card-text">A book for cheese lovers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="imgs/Client3_Book2.png" class="card-img-top" alt="Glory Riders">
+                        <div class="card-body">
+                            <h5 class="card-title">Glory Riders</h5>
+                            <p class="card-text">A book about bikers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="imgs/Client3_Book3.png" class="card-img-top" alt="Sorcerer's Shadowed Chronicles">
+                        <div class="card-body">
+                            <h5 class="card-title">Sorcerer's Shadowed Chronicles</h5>
+                            <p class="card-text">A fantasy book</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter mt-4">
+            <h2 class="text-center">Subscribe to our Newsletter</h2>
+            <form id="newsletterForm" onsubmit="alert('Thank you for subscribing!'); return false;">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" id="newsletterEmail" placeholder="Your Email"
+                        aria-label="Your Email" aria-describedby="button-addon2" required>
+                    <button class="btn btn-primary" type="submit" id="button-addon2">Subscribe</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-inkwell text-white mt-4 p-3 text-center">
+        <p class="text-white">&copy; 2024 Book Haven Bookstore</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

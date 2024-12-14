@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Book Haven Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="bg-inkwell text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-inkwell">
+            <div class="container">
+                <a class="navbar-brand" href="/"><img src="logo.png" alt="Book Haven" height="40"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">CUSTOM PAGE (WORK IN PROGRESS)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <section class="about">
+            <h1 class="display-4">About Book Haven</h1>
+            <p class="lead">Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection
+                of books, magazines, journals, and office supplies. With a deep-rooted commitment to fostering literary
+                exploration and a love for reading, we are embarking on the creation of an online presence that mirrors
+                our dedication to the world of words. Serving a broad audience of book lovers and knowledge seekers, our
+                central goal is to amplify our visibility, cultivate a vibrant literary community, and simplify the
+                process of book inquiries and purchases.</p>
+
+            <h2 class="mt-4">Our Mission</h2>
+            <p>To foster a love of reading and learning within our community.</p>
+
+            <h2 class="mt-4">Business Hours</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday - Friday</td>
+                        <td>9:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>10:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>11:00 AM - 5:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <section id="contactForm" class="mt-4">
+                <h2 class="mt-4">Contact Us</h2>
+                <form id="contactForm" onsubmit="saveFormData(event)">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                    </div>
+                    <button class="btn btn-primary">Send Message</button>
+                </form>
+                <div id="contactResponse"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="bg-inkwell mt-4 p-3 text-center">
+        <p class="text-white">&copy2024 Book Haven Bookstore</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Function to save form data in localStorage
+        function saveFormData(event) {
+            event.preventDefault(); // Prevent form submission
+            const form = event.target;
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
+            localStorage.setItem('contactFormData', JSON.stringify(formData));
+            alert('Thank you for your feedback!');
+        }
+
+        // Function to load form data from localStorage
+        window.onload = function () {
+            const savedData = JSON.parse(localStorage.getItem('contactFormData'));
+            if (savedData) {
+                document.getElementById('name').value = savedData.name || '';
+                document.getElementById('email').value = savedData.email || '';
+                document.getElementById('message').value = savedData.message || '';
+            }
+        };
+    </script>
+</body>
+
+</html>

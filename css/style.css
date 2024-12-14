@@ -1,0 +1,195 @@
+/* Base Styles */
+body {
+    font-family: 'Calibri', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7EE;
+    /* Parchment White */
+    color: #131C26;
+    /* Bookish Black */
+    line-height: 1.6;
+}
+
+/* Typography */
+h1,
+.title-large {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.875rem;
+    /* 30px */
+    font-weight: bold;
+    color: #2E4057;
+    /* Inkwell Blue */
+}
+
+h2,
+.title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5625rem;
+    /* 25px */
+    font-weight: bold;
+    color: #2E4057;
+    /* Inkwell Blue */
+}
+
+h3,
+.subtitle {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 0.9375rem;
+    /* 15px */
+    font-weight: normal;
+    color: #2E4057;
+    /* Inkwell Blue */
+}
+
+p,
+.body {
+    font-family: 'Calibri', sans-serif;
+    font-size: 1rem;
+    /* 16px */
+    color: #131C26;
+    /* Bookish Black */
+}
+
+.body-large {
+    font-family: 'Calibri', sans-serif;
+    font-size: 1.25rem;
+    /* 20px */
+}
+
+.body-strong {
+    font-family: 'Calibri', sans-serif;
+    font-size: 1rem;
+    /* 16px */
+    font-weight: bold;
+}
+
+.caption {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.6875rem;
+    /* 11px */
+    font-weight: bold;
+    color: #2E4057;
+    /* Inkwell Blue */
+}
+
+/* Background Colors */
+.bg-inkwell {
+    background-color: #2E4057;
+    /* Inkwell Blue */
+}
+
+.bg-secondary {
+    background-color: #EE583F;
+    /* Intensity Indigo */
+}
+
+.bg-tertiary {
+    background-color: #F7B3CC;
+    /* Dusty Rose */
+}
+
+.bg-quaternary {
+    background-color: #C7B65E;
+    /* Aged Gold */
+}
+
+/* Text Colors */
+.text-primary {
+    color: #2E4057;
+    /* Inkwell Blue */
+}
+
+.text-secondary {
+    color: #EE583F;
+    /* Intensity Indigo */
+}
+
+.text-tertiary {
+    color: #F7B3CC;
+    /* Dusty Rose */
+}
+
+.text-quaternary {
+    color: #C7B65E;
+    /* Aged Gold */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #EE583F;
+    /* Intensity Indigo */
+    border: 1px solid #EE583F;
+    color: #FFF7EE;
+    /* Parchment White */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    /* 16px */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #d44d36;
+    /* Slightly darken */
+    border-color: #d44d36;
+    outline: none;
+}
+
+.btn-primary:active {
+    background-color: #b5412d;
+    /* Even darker */
+    border-color: #b5412d;
+}
+
+/* Navigation */
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    /* 16px */
+}
+
+.nav-link:hover {
+    color: #FFF7EE;
+    /* Parchment White */
+    text-decoration: underline;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #C7B65E;
+    /* Aged Gold */
+}
+
+/* Cards */
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    border-radius: 4px 4px 0 0;
+}
+
+.card {
+    border: 1px solid #2E4057;
+    /* Inkwell Blue */
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #FFF7EE;
+    /* Parchment White */
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
